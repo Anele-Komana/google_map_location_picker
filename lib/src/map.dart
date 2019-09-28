@@ -176,6 +176,7 @@ class MapPickerState extends State<MapPicker> {
                   ),
                   Spacer(),
                   FloatingActionButton(
+                    backgroundColor: new Color(0xFFF04F2B),
                     onPressed: () {
                       Navigator.of(context).pop({
                         'location': LocationResult(
@@ -336,6 +337,7 @@ class _MapFabs extends StatelessWidget {
       child: Column(
         children: <Widget>[
           FloatingActionButton(
+            backgroundColor: new Color(0xFFF04F2B),
             onPressed: onToggleMapTypePressed,
             materialTapTargetSize: MaterialTapTargetSize.padded,
             mini: true,
