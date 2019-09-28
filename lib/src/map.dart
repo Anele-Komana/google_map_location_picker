@@ -85,7 +85,9 @@ class MapPickerState extends State<MapPicker> {
     return Scaffold(
       body: Builder(builder: (context) {
         if (_currentPosition == null)
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(new Color(0xFFF04F2B)),
+          ));
 
         return buildMap();
       }),
@@ -156,7 +158,9 @@ class MapPickerState extends State<MapPicker> {
                         loadingIndicator: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            CircularProgressIndicator(),
+                            CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(new Color(0xFFF04F2B)),
+                            ),
                           ],
                         ),
                         builder: (context, address) {
@@ -167,7 +171,7 @@ class MapPickerState extends State<MapPicker> {
                               Text(
                                 address ?? 'Unnamed place',
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 14,
                                 ),
                               ),
                             ],
