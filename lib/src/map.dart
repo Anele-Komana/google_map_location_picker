@@ -86,7 +86,7 @@ class MapPickerState extends State<MapPicker> {
       body: Builder(builder: (context) {
         if (_currentPosition == null)
           return const Center(child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(new Color(0xFFF04F2B)),
+            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFF04F2B)),
           ));
 
         return buildMap();
@@ -159,7 +159,7 @@ class MapPickerState extends State<MapPicker> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(new Color(0xFFF04F2B)),
+                              valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFF04F2B)),
                             ),
                           ],
                         ),
@@ -180,7 +180,7 @@ class MapPickerState extends State<MapPicker> {
                   ),
                   Spacer(),
                   FloatingActionButton(
-                    backgroundColor: new Color(0xFFF04F2B),
+                    backgroundColor: Color(0xFFF04F2B),
                     onPressed: () {
                       Navigator.of(context).pop({
                         'location': LocationResult(
